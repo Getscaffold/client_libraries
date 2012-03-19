@@ -1,1 +1,1 @@
-require 'scaffold_api'
+require 'scaffold'
