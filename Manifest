@@ -2,7 +2,7 @@ Manifest
 README.rdoc
 Rake
 Rakefile
+init.rb
 lib/scaffold.rb
 lib/url_signing.rb
-rails/init.rb
 scaffold-api.gemspec
