@@ -15,7 +15,7 @@ module Scaffold
       raise ArgumentError, "Must provide service_id and api_key" unless service_id && api_key
       self.service_id = service_id
       self.api_key = api_key
-      self.server = server
+      self.server = server || DEFAULT_SERVER
       if ping
         self.token = get_token
       end
@@ -128,7 +128,7 @@ module Scaffold
         params[:signature] = 
           UrlSigning.generate_signature(params, signed_with)
       end
-      url = UrlSigning.construct_url(DEFAULT_SERVER + BASE_URI + command, params)
+      url = UrlSigning.construct_url(self.server + BASE_URI + command, params)
       return send_request(url)
     end
 
