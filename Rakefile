@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('scaffold-api', '0.1.1') do |p|
+Echoe.new('scaffold-api', '0.1.2') do |p|
   p.description = "Client library for accessing the Scaffold API."
   p.url = "http://github.com/dana11235/scaffold-api"
   p.author = "Dana Levine"
