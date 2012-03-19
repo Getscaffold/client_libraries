@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "scaffold-api"
-  s.version = "0.1.4"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dana Levine"]
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = "Client library for accessing the Scaffold API."
   s.email = "dana@getscaffold.com"
   s.extra_rdoc_files = ["README.rdoc", "lib/scaffold.rb", "lib/url_signing.rb"]
-  s.files = ["Manifest", "README.rdoc", "Rake", "Rakefile", "init.rb", "lib/scaffold.rb", "lib/url_signing.rb", "scaffold-api.gemspec"]
+  s.files = ["Manifest", "README.rdoc", "Rake", "Rakefile", "lib/scaffold.rb", "lib/url_signing.rb", "rails/init.rb", "scaffold-api.gemspec"]
   s.homepage = "http://github.com/dana11235/scaffold-api"
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Scaffold-api", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
