@@ -83,7 +83,6 @@ module Scaffold
       return_code, response = send_command("mailing_address/check_code", token, 
         {:code => code, :request_id => request_id})
       return return_code == "200"
-      raise ArgumentError, response["error"]
     end
 
     ##
@@ -103,7 +102,6 @@ module Scaffold
       return_code, response = send_command("phone_number/check_code", token, 
         {:code => code, :request_id => request_id})
       return return_code == "200"
-      raise ArgumentError, response["error"]
     end
 
     ##
