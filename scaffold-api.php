@@ -20,8 +20,8 @@ class Api {
     }
   }
 
-    ##
-    # Sends a ping to the remote server
+  ##
+  # Sends a ping to the remote server
   function ping() {
     $response = $this->send_command("ping");
     return $response["code"] == 200;
