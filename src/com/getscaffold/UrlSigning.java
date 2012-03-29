@@ -18,16 +18,16 @@ import com.google.gson.internal.Pair;
 
 public class UrlSigning {
 	// signs a url with the specified key
-	public static String sign_url(String url, String key) {
-		Pair<String, Map<String, String>> response = get_params(url);
+	public static String signUrl(String url, String key) {
+		Pair<String, Map<String, String>> response = getParams(url);
 		String server = response.first;
 		Map<String,String> params = response.second;
-		params.put("signature", generate_signature(params, key));
-		return construct_url(server, params);
+		params.put("signature", generateSignature(params, key));
+		return constructUrl(server, params);
 	}
 
 	  // Concatenate the server and params array into a single url
-	public static String construct_url(String server, Map<String,String> params) {
+	public static String constructUrl(String server, Map<String,String> params) {
 	    String url = server + "?";
 	   
 	    int pos = 0;
@@ -48,28 +48,28 @@ public class UrlSigning {
 	private static List PARAMS_TO_IGNORE = 
 			Arrays.asList(new String[]{"action", "controller", "signature"}); 
 	// generates the signature, given the key and params
-	public static String generate_signature(Map<String,String> request_params, String key) {
-		String raw_signature = key;
+	public static String generateSignature(Map<String,String> requestParams, String key) {
+		String rawSignature = "";
 		
-		for (String param : request_params.keySet()) {
+		for (String param : requestParams.keySet()) {
 			if (!PARAMS_TO_IGNORE.contains(param)){
-				raw_signature += param + request_params.get(param);
+				rawSignature += param + requestParams.get(param);
 			}
 		}
 		
 		String hash = null;
 		try {
+			// Do some mumbo jumbo to generate the Hmac-sha1 hash
 		  Mac mac = Mac.getInstance("HmacSHA1");
-      SecretKeySpec secret = new SecretKeySpec(" ".getBytes(),"HmacSHA1");
+      SecretKeySpec secret = new SecretKeySpec(key.getBytes(),"HmacSHA1");
       mac.init(secret);
-      byte[] digest = mac.doFinal(raw_signature.getBytes());
-      BigInteger big_int_digest = new BigInteger(1, digest);
-      hash = big_int_digest.toString(16);
+      byte[] digest = mac.doFinal(rawSignature.getBytes());
+      BigInteger bigIntDigest = new BigInteger(1, digest);
+      hash = bigIntDigest.toString(16);
       if (hash.length() % 2 != 0) {
-          hash = "0" + hash;
+        hash = "0" + hash;
       }
       
-      hash = new String(digest);
 		} catch (NoSuchAlgorithmException nsae) {
 		  // Won't happen, because the algo exists.
 		} catch (InvalidKeyException ike) {
@@ -77,29 +77,29 @@ public class UrlSigning {
 		}
 
 		if (true) {
-			System.out.println("RAW: " + raw_signature);
+			System.out.println("RAW: " + rawSignature);
 			System.out.println("HASH: " + hash);
 		}
 		return hash;
 	}
 
 	// Parses the url, returning the server name and an array of params
-	private static Pair<String, Map<String, String>> get_params(String url) {
-		String[] url_parts = url.split("?");
-		String server = url_parts[0];
-		String[] parameters = url_parts[1].split("&");
-		Map<String, String> param_map = new TreeMap<String, String>();
+	private static Pair<String, Map<String, String>> getParams(String url) {
+		String[] urlParts = url.split("?");
+		String server = urlParts[0];
+		String[] parameters = urlParts[1].split("&");
+		Map<String, String> paramMap = new TreeMap<String, String>();
 		for(String parameter : parameters) {
-			String[] param_pieces = parameter.split("=");
+			String[] paramPieces = parameter.split("=");
 			try {
-				param_map.put(param_pieces[0], URLDecoder.decode(param_pieces[1], "utf-8"));
+				paramMap.put(paramPieces[0], URLDecoder.decode(paramPieces[1], "utf-8"));
 			} catch (UnsupportedEncodingException e) {
 				// Won't ever happen since UTF-8 is supported
 			}
 		}
 
-		param_map.put("timestamp", String.valueOf(System.currentTimeMillis() / 1000));
+		paramMap.put("timestamp", String.valueOf(System.currentTimeMillis() / 1000));
 
-		return new Pair<String, Map<String, String>>(server, param_map);
+		return new Pair<String, Map<String, String>>(server, paramMap);
 	}
 }

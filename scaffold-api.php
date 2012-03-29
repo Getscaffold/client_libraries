@@ -156,6 +156,4 @@ class Api {
                  "body" => json_decode($request->getResponseBody(), true));
   } 
 }
-
-$api = new Api("SCAFFOLD", "7206e24417dfe54df876e8580c1364e541648e18", "http://localhost:3000");
 ?>

@@ -28,14 +28,14 @@ class UrlSigning {
   private static $PARAMS_TO_IGNORE = array("action", "controller", "signature"); 
   # generates the signature, given the key and params
   static function generate_signature($request_params, $key) {
-    $raw_signature = $key;
+    $raw_signature = "";
     ksort($request_params);
     foreach($request_params as $key => $value) {
       if (!array_key_exists($key, UrlSigning::$PARAMS_TO_IGNORE)) {
         $raw_signature .= $key . $value;
       }
     }
-    $hash = hash_hmac("sha1", $raw_signature, "");
+    $hash = hash_hmac("sha1", $raw_signature, $key);
     if (PRINT_URL) {
       echo "RAW: " . $raw_signature . "\n";
       echo "HASH: " . $hash . "\n";

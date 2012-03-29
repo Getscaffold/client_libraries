@@ -26,16 +26,16 @@ public class ApiResponse {
 	}
 
 	public class ApiResponseBody{
-		private String requestId;
+		private String request_id;
 		private String token;
 		private String error;
 
 		public String getRequestId() {
-			return requestId;
+			return request_id;
 		}
 
 		public void setRequestId(String requestId) {
-			this.requestId = requestId;
+			this.request_id = requestId;
 		}
 
 		public String getError() {

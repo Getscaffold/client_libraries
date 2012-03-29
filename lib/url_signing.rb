@@ -14,14 +14,14 @@ module UrlSigning
   PARAMS_TO_IGNORE = ["action", "controller", "signature"] 
   # generates the signature, given the key and params
   def self.generate_signature(request_params, key)
-    raw_signature = key.clone
+    raw_signature = ""
     request_params.keys.sort.each do |request_param|
       unless PARAMS_TO_IGNORE.include? request_param.to_s
         raw_signature << request_param.to_s << 
           request_params[request_param].to_s
       end 
     end
-    return OpenSSL::HMAC.hexdigest(DIGEST, '', raw_signature)
+    return OpenSSL::HMAC.hexdigest(DIGEST, key, raw_signature)
   end
 
   private
