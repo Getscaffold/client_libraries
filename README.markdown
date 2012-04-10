@@ -1,9 +1,12 @@
 Scaffold Client Library Instructions
 ===
 
-Building the Libraries
+Building and Installing the Libraries
 ---
-Most of the client libraries
+
+### PHP
+
+### Ruby
 
 ### Java
 
@@ -17,9 +20,8 @@ Generating the documentation
 `rdoc --op rdoc -main lib/scaffold-api.rb`
 
 ### Java
-
-### Python
-Forthcoming
+`javadoc -d javadoc -sourcepath src -classpath gson-2.1.jar -verbose
+com.getscaffold`
 
 Usage
 ---
