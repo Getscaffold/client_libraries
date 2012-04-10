@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a2" title="">
+  <file path="scaffold-api.php" hash="8e119f7b777dd32f8283270c480df7a3" package="Default">
+    <parse_markers>
+      <error line="9" code="50018">No DocBlock was found for property $token</error>
+      <error line="10" code="50018">No DocBlock was found for property $service_id</error>
+      <error line="11" code="50018">No DocBlock was found for property $api_key</error>
+      <error line="12" code="50018">No DocBlock was found for property $server</error>
+      <error line="66" code="50015">Argument $first_name is missing from the Docblock of submit_background_check_request()</error>
+      <error line="66" code="50015">Argument $last_name is missing from the Docblock of submit_background_check_request()</error>
+      <error line="66" code="50015">Argument $dob is missing from the Docblock of submit_background_check_request()</error>
+      <error line="66" code="50015">Argument $ssn is missing from the Docblock of submit_background_check_request()</error>
+      <error line="66" code="50015">Argument $email is missing from the Docblock of submit_background_check_request()</error>
+      <error line="66" code="50015">Argument $callback_url is missing from the Docblock of submit_background_check_request()</error>
+      <error line="66" code="50015">Argument $optional_params is missing from the Docblock of submit_background_check_request()</error>
+      <error line="95" code="50014">Name of argument $first_name does not match with the DocBlock's name $address in mailing_address_send_code()</error>
+      <error line="95" code="50014">Name of argument $last_name does not match with the DocBlock's name $address2 in mailing_address_send_code()</error>
+      <error line="95" code="50015">Argument $address is missing from the Docblock of mailing_address_send_code()</error>
+      <error line="95" code="50015">Argument $city is missing from the Docblock of mailing_address_send_code()</error>
+      <error line="95" code="50015">Argument $state is missing from the Docblock of mailing_address_send_code()</error>
+      <error line="95" code="50015">Argument $zip is missing from the Docblock of mailing_address_send_code()</error>
+      <error line="95" code="50015">Argument $email is missing from the Docblock of mailing_address_send_code()</error>
+      <error line="95" code="50015">Argument $address2 is missing from the Docblock of mailing_address_send_code()</error>
+      <error line="114" code="50015">Argument $code is missing from the Docblock of mailing_address_check_code()</error>
+      <error line="114" code="50015">Argument $request_id is missing from the Docblock of mailing_address_check_code()</error>
+      <error line="124" code="50015">Argument $phone_number is missing from the Docblock of phone_number_send_code()</error>
+      <error line="124" code="50015">Argument $email is missing from the Docblock of phone_number_send_code()</error>
+      <error line="124" code="50015">Argument $type is missing from the Docblock of phone_number_send_code()</error>
+      <error line="138" code="50015">Argument $code is missing from the Docblock of phone_number_check_code()</error>
+      <error line="138" code="50015">Argument $request_id is missing from the Docblock of phone_number_check_code()</error>
+      <error line="148" code="50015">Argument $first_name is missing from the Docblock of professional_license_submit_request()</error>
+      <error line="148" code="50015">Argument $last_name is missing from the Docblock of professional_license_submit_request()</error>
+      <error line="148" code="50015">Argument $state is missing from the Docblock of professional_license_submit_request()</error>
+      <error line="148" code="50015">Argument $license_type is missing from the Docblock of professional_license_submit_request()</error>
+      <error line="148" code="50015">Argument $license_number is missing from the Docblock of professional_license_submit_request()</error>
+      <error line="148" code="50015">Argument $callback_url is missing from the Docblock of professional_license_submit_request()</error>
+      <error line="148" code="50015">Argument $email is missing from the Docblock of professional_license_submit_request()</error>
+      <error line="166" code="50010">No DocBlock was found for method print_me()</error>
+      <error line="170" code="50010">No DocBlock was found for method send_command()</error>
+      <error line="182" code="50010">No DocBlock was found for method send_request()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file scaffold-api.php</error>
+    </parse_markers>
+    <include line="2" type="Include" package="Default">
+      <name>url_signing.php</name>
+    </include>
+    <class final="false" abstract="false" namespace="default" line="8" package="Default">
+      <name>ScaffoldApi</name>
+      <full_name>\ScaffoldApi</full_name>
+      <extends/>
+      <docblock line="4">
+        <description><![CDATA[Scaffold API Client Library]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="4" name="author" description="Dana Levine"/>
+      </docblock>
+      <constant namespace="default" line="13" package="Default">
+        <name>DEFAULT_SERVER</name>
+        <value><![CDATA["https://api.getscaffold.com"]]></value>
+      </constant>
+      <constant namespace="default" line="14" package="Default">
+        <name>VERSION</name>
+        <value><![CDATA["1.0"]]></value>
+      </constant>
+      <constant namespace="default" line="15" package="Default">
+        <name>BASE_URL</name>
+        <value><![CDATA["/v1/"]]></value>
+      </constant>
+      <property final="false" static="false" visibility="private" line="9" package="Default">
+        <name>$token</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="10" package="Default">
+        <name>$service_id</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="11" package="Default">
+        <name>$api_key</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="12" package="Default">
+        <name>$server</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="25" package="">
+        <name>__construct</name>
+        <type>function</type>
+        <docblock line="17">
+          <description><![CDATA[Initializes the API.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="17" name="param" description="your service id" type="string" variable="$service_id">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="17" name="param" description="your api key" type="string" variable="$api_key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="17" name="param" description="the server (if none specified, production server is used) with the specified parameters. If no server is specified, the production server is used." type="string" variable="$server">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$service_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="25">
+          <name>$api_key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="25">
+          <name>$server</name>
+          <default><![CDATA[self::DEFAULT_SERVER]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="39" package="">
+        <name>ping</name>
+        <type>function</type>
+        <docblock line="35">
+          <description><![CDATA[Sends a ping to the remote server]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="35" name="return" description="whether the ping succeeded" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="48" package="">
+        <name>get_token</name>
+        <type>function</type>
+        <docblock line="44">
+          <description><![CDATA[Requests a token that can be used to make api calls]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="44" name="return" description="token" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="61" package="">
+        <name>verify_signature</name>
+        <type>function</type>
+        <docblock line="57">
+          <description><![CDATA[Verifies that the signature is valid]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="57" name="return" description="whether the signature is valid" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="82" package="">
+        <name>submit_background_check_request</name>
+        <type>function</type>
+        <docblock line="66">
+          <description><![CDATA[Submits a background check request.]]></description>
+          <long-description><![CDATA[<p>Optional params is a hash of additional parameters (defaults in parens):</p>
+
+<ul>
+  <li>fail_on_misdemeanor (true) – failure if a misdemeanor is found</li>
+  <li>fail_on_felony  (true) – failure if a felony is found</li>
+  <li>fail_on_dui (true) – failure if a DUI or related offense is found</li>
+  <li>fail_on_sex_offense (true) – failure if a sex offense is found</li>
+  <li>fail_on_terrorist  (true) – failure if the subject appears on the
+  OFAC terrorist list</li>
+  <li>check_type (electronic) - determines which type of check is run
+  [electronic, recent, all]</li>
+</ul>]]></long-description>
+          <tag line="66" name="return" description="request_id" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="82">
+          <name>$first_name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="82">
+          <name>$last_name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="82">
+          <name>$dob</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="82">
+          <name>$ssn</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="83">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="83">
+          <name>$callback_url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="83">
+          <name>$optional_params</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="101" package="">
+        <name>mailing_address_send_code</name>
+        <type>function</type>
+        <docblock line="95">
+          <description><![CDATA[Sends a postcard with a code to the specified mailing address]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="95" name="param" description="first line of the mailing address" type="string" variable="$address">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="95" name="param" description="optional second line of the mailing address" type="string" variable="$address2">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="95" name="return" description="request_id" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="101">
+          <name>$first_name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="101">
+          <name>$last_name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="101">
+          <name>$address</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="101">
+          <name>$city</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="102">
+          <name>$state</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="102">
+          <name>$zip</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="102">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="102">
+          <name>$address2</name>
+          <default><![CDATA[NULL]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="118" package="">
+        <name>mailing_address_check_code</name>
+        <type>function</type>
+        <docblock line="114">
+          <description><![CDATA[Checks the provided mailing address code/request_id.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="114" name="return" description="whether the code is valid" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="118">
+          <name>$code</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="118">
+          <name>$request_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="128" package="">
+        <name>phone_number_send_code</name>
+        <type>function</type>
+        <docblock line="124">
+          <description><![CDATA[Sends a code to the specified phone number.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="124" name="return" description="request_id" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="128">
+          <name>$phone_number</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="128">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="128">
+          <name>$type</name>
+          <default><![CDATA["sms"]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="142" package="">
+        <name>phone_number_check_code</name>
+        <type>function</type>
+        <docblock line="138">
+          <description><![CDATA[Checks the provided phone number code/request_id.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="138" name="return" description="whether the code is valid" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="142">
+          <name>$code</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="142">
+          <name>$request_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="152" package="">
+        <name>professional_license_submit_request</name>
+        <type>function</type>
+        <docblock line="148">
+          <description><![CDATA[Submits a professional license request.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="148" name="return" description="request_id" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="152">
+          <name>$first_name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="152">
+          <name>$last_name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="152">
+          <name>$state</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="153">
+          <name>$license_type</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="153">
+          <name>$license_number</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="153">
+          <name>$callback_url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="153">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="166" package="">
+        <name>print_me</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="default" line="170" package="">
+        <name>send_command</name>
+        <type>function</type>
+        <argument line="170">
+          <name>$command</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="170">
+          <name>$signed_with</name>
+          <default><![CDATA[NULL]]></default>
+          <type/>
+        </argument>
+        <argument line="170">
+          <name>$params</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="default" line="182" package="">
+        <name>send_request</name>
+        <type>function</type>
+        <argument line="182">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <package name="" full_name=""/>
+  <package name="Default" full_name="Default"/>
+  <namespace name="default" full_name="default"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>

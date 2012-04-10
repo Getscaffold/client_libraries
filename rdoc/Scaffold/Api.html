@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Scaffold::Api - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/scaffold-api.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-get_token">#get_token</a>
+    
+    <li><a href="#method-i-mailing_address_check_code">#mailing_address_check_code</a>
+    
+    <li><a href="#method-i-mailing_address_send_code">#mailing_address_send_code</a>
+    
+    <li><a href="#method-i-phone_number_check_code">#phone_number_check_code</a>
+    
+    <li><a href="#method-i-phone_number_send_code">#phone_number_send_code</a>
+    
+    <li><a href="#method-i-ping">#ping</a>
+    
+    <li><a href="#method-i-professional_license_submit_request">#professional_license_submit_request</a>
+    
+    <li><a href="#method-i-submit_background_check_request">#submit_background_check_request</a>
+    
+    <li><a href="#method-i-verify_signature">#verify_signature</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Scaffold.html">Scaffold</a>
+  
+    <li><a href="../Scaffold/Api.html">Scaffold::Api</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Scaffold::Api</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="BASE_URI">BASE_URI
+        
+        <dd class="description">
+        
+      
+        <dt id="DEFAULT_SERVER">DEFAULT_SERVER
+        
+        <dd class="description">
+        
+      
+        <dt id="VERSION">VERSION
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-api_key" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">api_key</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-server" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">server</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-service_id" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">service_id</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-token" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">token</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(service_id, api_key, server = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Constructs a new API object. If not specified, server defaults to
+production api server.</p>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/scaffold-api.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">service_id</span>, <span class="ruby-identifier">api_key</span>, <span class="ruby-identifier">server</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Must provide service_id and api_key&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">service_id</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">api_key</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">service_id</span> = <span class="ruby-identifier">service_id</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">api_key</span> = <span class="ruby-identifier">api_key</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">server</span> = <span class="ruby-identifier">server</span> <span class="ruby-operator">||</span> <span class="ruby-constant">DEFAULT_SERVER</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">ping</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">token</span> = <span class="ruby-identifier">get_token</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-get_token" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_token</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Requests a token that can be used to make api calls</p>
+          
+
+          
+          <div class="method-source-code" id="get_token-source">
+            <pre><span class="ruby-comment"># File lib/scaffold-api.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_token</span>
+  <span class="ruby-identifier">return_code</span>, <span class="ruby-identifier">response</span> = <span class="ruby-identifier">send_command</span>(<span class="ruby-string">&quot;get_token&quot;</span>, <span class="ruby-identifier">api_key</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;token&quot;</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">return_code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;200&quot;</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_token-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_token-method -->
+
+    
+      <div id="method-i-mailing_address_check_code" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mailing_address_check_code</span><span
+            class="method-args">(code, request_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Checks the provided mailing address code/request_id.</p>
+          
+
+          
+          <div class="method-source-code" id="mailing_address_check_code-source">
+            <pre><span class="ruby-comment"># File lib/scaffold-api.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mailing_address_check_code</span>(<span class="ruby-identifier">code</span>, <span class="ruby-identifier">request_id</span>)
+  <span class="ruby-identifier">return_code</span>, <span class="ruby-identifier">response</span> = <span class="ruby-identifier">send_command</span>(<span class="ruby-string">&quot;mailing_address/check_code&quot;</span>, <span class="ruby-identifier">token</span>, 
+    {<span class="ruby-value">:code</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">code</span>, <span class="ruby-value">:request_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">request_id</span>})
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">return_code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;200&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- mailing_address_check_code-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- mailing_address_check_code-method -->
+
+    
+      <div id="method-i-mailing_address_send_code" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mailing_address_send_code</span><span
+            class="method-args">(first_name, last_name, address, city, state, zip, email, address2 = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sends a postcard with a code to the specified mailing address</p>
+
+<p>returns @request_id</p>
+          
+
+          
+          <div class="method-source-code" id="mailing_address_send_code-source">
+            <pre><span class="ruby-comment"># File lib/scaffold-api.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mailing_address_send_code</span>(<span class="ruby-identifier">first_name</span>, <span class="ruby-identifier">last_name</span>, <span class="ruby-identifier">address</span>, <span class="ruby-identifier">city</span>, <span class="ruby-identifier">state</span>,
+    <span class="ruby-identifier">zip</span>, <span class="ruby-identifier">email</span>, <span class="ruby-identifier">address2</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">return_code</span>, <span class="ruby-identifier">response</span> = <span class="ruby-identifier">send_command</span>(<span class="ruby-string">&quot;mailing_address/send_code&quot;</span>, <span class="ruby-identifier">token</span>, 
+    {<span class="ruby-value">:first_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">first_name</span>, <span class="ruby-value">:last_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">last_name</span>, 
+      <span class="ruby-value">:address</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">address</span>, <span class="ruby-value">:address2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">address2</span>, <span class="ruby-value">:city</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">city</span>, 
+      <span class="ruby-value">:state</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">state</span>, <span class="ruby-value">:zip</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">zip</span>, <span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">email</span>})
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;request_id&quot;</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">return_code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;200&quot;</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- mailing_address_send_code-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- mailing_address_send_code-method -->
+
+    
+      <div id="method-i-phone_number_check_code" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">phone_number_check_code</span><span
+            class="method-args">(code, request_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Checks the provided phone number code/request_id.</p>
+          
+
+          
+          <div class="method-source-code" id="phone_number_check_code-source">
+            <pre><span class="ruby-comment"># File lib/scaffold-api.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">phone_number_check_code</span>(<span class="ruby-identifier">code</span>, <span class="ruby-identifier">request_id</span>)
+  <span class="ruby-identifier">return_code</span>, <span class="ruby-identifier">response</span> = <span class="ruby-identifier">send_command</span>(<span class="ruby-string">&quot;phone_number/check_code&quot;</span>, <span class="ruby-identifier">token</span>, 
+    {<span class="ruby-value">:code</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">code</span>, <span class="ruby-value">:request_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">request_id</span>})
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">return_code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;200&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- phone_number_check_code-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- phone_number_check_code-method -->
+
+    
+      <div id="method-i-phone_number_send_code" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">phone_number_send_code</span><span
+            class="method-args">(phone_number, email, type = "sms")</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sends a code to the specified phone number.</p>
+
+<p>Valid values for type are “sms” and “voice”</p>
+
+<p>returns @request_id</p>
+          
+
+          
+          <div class="method-source-code" id="phone_number_send_code-source">
+            <pre><span class="ruby-comment"># File lib/scaffold-api.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">phone_number_send_code</span>(<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">email</span>, <span class="ruby-identifier">type</span> = <span class="ruby-string">&quot;sms&quot;</span>)
+  <span class="ruby-identifier">return_code</span>, <span class="ruby-identifier">response</span> = <span class="ruby-identifier">send_command</span>(<span class="ruby-string">&quot;phone_number/send_code&quot;</span>, <span class="ruby-identifier">token</span>, 
+    {<span class="ruby-value">:phone_number</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">phone_number</span>, <span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">email</span>})
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;request_id&quot;</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">return_code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;200&quot;</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- phone_number_send_code-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- phone_number_send_code-method -->
+
+    
+      <div id="method-i-ping" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ping</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sends a ping to the remote server</p>
+          
+
+          
+          <div class="method-source-code" id="ping-source">
+            <pre><span class="ruby-comment"># File lib/scaffold-api.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ping</span>
+  <span class="ruby-identifier">return_code</span>, <span class="ruby-identifier">response</span> = <span class="ruby-identifier">send_command</span>(<span class="ruby-string">&quot;ping&quot;</span>)
+  <span class="ruby-identifier">return_code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;200&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- ping-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ping-method -->
+
+    
+      <div id="method-i-professional_license_submit_request" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">professional_license_submit_request</span><span
+            class="method-args">(first_name, last_name, state, license_type, license_number, callback_url, email)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Submits a professional license request.</p>
+
+<p>returns @request_id</p>
+          
+
+          
+          <div class="method-source-code" id="professional_license_submit_request-source">
+            <pre><span class="ruby-comment"># File lib/scaffold-api.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">professional_license_submit_request</span>(<span class="ruby-identifier">first_name</span>, <span class="ruby-identifier">last_name</span>, <span class="ruby-identifier">state</span>,
+    <span class="ruby-identifier">license_type</span>, <span class="ruby-identifier">license_number</span>, <span class="ruby-identifier">callback_url</span>, <span class="ruby-identifier">email</span>)
+  <span class="ruby-identifier">return_code</span>, <span class="ruby-identifier">response</span> = <span class="ruby-identifier">send_command</span>(<span class="ruby-string">&quot;license/submit_request&quot;</span>, <span class="ruby-identifier">token</span>, 
+    {<span class="ruby-value">:first_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">first_name</span>, <span class="ruby-value">:last_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">last_name</span>, <span class="ruby-value">:state</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">state</span>,
+     <span class="ruby-value">:license_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">license_type</span>, <span class="ruby-value">:license_number</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">license_number</span>,
+     <span class="ruby-value">:callback_url</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">callback_url</span>, <span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">email</span>})
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;request_id&quot;</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">return_code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;200&quot;</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- professional_license_submit_request-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- professional_license_submit_request-method -->
+
+    
+      <div id="method-i-submit_background_check_request" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">submit_background_check_request</span><span
+            class="method-args">(first_name, last_name, dob, ssn, email, callback_url, optional_params = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Submits a background check request.</p>
+
+<p>Optional params is a hash of additional parameters (defaults in parens):</p>
+<ul><li>
+<p>fail_on_misdemeanor (true) – failure if a misdemeanor is found</p>
+</li><li>
+<p>fail_on_felony  (true) – failure if a felony is found</p>
+</li><li>
+<p>fail_on_dui (true) – failure if a DUI or related offense is found</p>
+</li><li>
+<p>fail_on_sex_offense (true) – failure if a sex offense is found</p>
+</li><li>
+<p>fail_on_terrorist  (true) – failure if the subject appears on the OFAC
+terrorist list</p>
+</li><li>
+<p>check_type (electronic) - determines which type of check is run
+[electronic, recent, all]</p>
+</li></ul>
+
+<p>returns @request_id</p>
+          
+
+          
+          <div class="method-source-code" id="submit_background_check_request-source">
+            <pre><span class="ruby-comment"># File lib/scaffold-api.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">submit_background_check_request</span>(<span class="ruby-identifier">first_name</span>, <span class="ruby-identifier">last_name</span>, <span class="ruby-identifier">dob</span>, <span class="ruby-identifier">ssn</span>, <span class="ruby-identifier">email</span>,
+    <span class="ruby-identifier">callback_url</span>, <span class="ruby-identifier">optional_params</span> = {})
+  <span class="ruby-identifier">return_code</span>, <span class="ruby-identifier">response</span> = <span class="ruby-identifier">send_command</span>(<span class="ruby-string">&quot;background_check/submit_request&quot;</span>, <span class="ruby-identifier">token</span>, 
+    {<span class="ruby-value">:first_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">first_name</span>, <span class="ruby-value">:last_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">last_name</span>, <span class="ruby-value">:dob</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dob</span>, 
+     <span class="ruby-value">:ssn</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ssn</span>, <span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">email</span>, <span class="ruby-value">:callback_url</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">callback_url</span>
+    }.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">optional_params</span>))
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;request_id&quot;</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">return_code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;200&quot;</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- submit_background_check_request-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- submit_background_check_request-method -->
+
+    
+      <div id="method-i-verify_signature" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">verify_signature</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Verifies that the signature mechanism is valid</p>
+          
+
+          
+          <div class="method-source-code" id="verify_signature-source">
+            <pre><span class="ruby-comment"># File lib/scaffold-api.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">verify_signature</span>
+  <span class="ruby-identifier">return_code</span>, <span class="ruby-identifier">response</span> = <span class="ruby-identifier">send_command</span>(<span class="ruby-string">&quot;verify_signature&quot;</span>, <span class="ruby-identifier">token</span>)
+  <span class="ruby-identifier">return_code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;200&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- verify_signature-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- verify_signature-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

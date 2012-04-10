@@ -1,3 +1,8 @@
+# Client Library for interacting with the Scaffold API
+#
+# Author::    Dana Levine (mailto:dana@getscaffold.com
+# Copyright:: Copyright (c) 2012 Speakergram, Inc
+
 require 'url_signing'
 
 module Scaffold
@@ -11,6 +16,8 @@ module Scaffold
     attr_accessor :api_key
     attr_accessor :server
 
+    # Constructs a new API object. If not specified, server defaults to
+    # production api server.
     def initialize(service_id, api_key, server = nil)
       raise ArgumentError, "Must provide service_id and api_key" unless service_id && api_key
       self.service_id = service_id
@@ -44,15 +51,16 @@ module Scaffold
     end
 
     ##
-    # Submits a background check request
-    # optional params is a hash of additional parameters (defaults in parens): 
-    #   fail_on_misdemeanor (true) – failure if a misdemeanor is found
-    #   fail_on_felony  (true) – failure if a felony is found
-    #   fail_on_dui (true) – failure if a DUI or related offense is found
-    #   fail_on_sex_offense (true) – failure if a sex offense is found
-    #   fail_on_terrorist  (true) – failure if the subject appears on the OFAC terrorist list
-    #   check_type (electronic) - determines which type of check is run
-    #     [electronic, recent, all]
+    # Submits a background check request.
+    #
+    # Optional params is a hash of additional parameters (defaults in parens): 
+    # * fail_on_misdemeanor (true) – failure if a misdemeanor is found
+    # * fail_on_felony  (true) – failure if a felony is found
+    # * fail_on_dui (true) – failure if a DUI or related offense is found
+    # * fail_on_sex_offense (true) – failure if a sex offense is found
+    # * fail_on_terrorist  (true) – failure if the subject appears on the OFAC terrorist list
+    # * check_type (electronic) - determines which type of check is run [electronic, recent, all]
+    # returns @request_id
     def submit_background_check_request(first_name, last_name, dob, ssn, email,
         callback_url, optional_params = {})
       return_code, response = send_command("background_check/submit_request", token, 
@@ -66,7 +74,7 @@ module Scaffold
     ##
     # Sends a postcard with a code to the specified mailing address
     #
-    # Returns request_id
+    # returns @request_id
     def mailing_address_send_code(first_name, last_name, address, city, state,
         zip, email, address2 = nil)
       return_code, response = send_command("mailing_address/send_code", token, 
@@ -87,8 +95,10 @@ module Scaffold
 
     ##
     # Sends a code to the specified phone number.
+    # 
+    # Valid values for type are "sms" and "voice"
     #
-    # Returns request_id
+    # returns @request_id
     def phone_number_send_code(phone_number, email, type = "sms")
       return_code, response = send_command("phone_number/send_code", token, 
         {:phone_number => phone_number, :email => email})
@@ -107,7 +117,7 @@ module Scaffold
     ##
     # Submits a professional license request.
     #
-    # Returns request_id
+    # returns @request_id
     def professional_license_submit_request(first_name, last_name, state,
         license_type, license_number, callback_url, email)
       return_code, response = send_command("license/submit_request", token, 
