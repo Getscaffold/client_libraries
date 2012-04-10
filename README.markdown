@@ -11,10 +11,10 @@ Generating the documentation
 ---
 
 ### PHP
-phpdoc run -f scaffold-api.php -t phpdoc
+`phpdoc run -f scaffold-api.php -t phpdoc`
 
 ### Ruby
-rdoc --op rdoc -main lib/scaffold-api.rb
+`rdoc --op rdoc -main lib/scaffold-api.rb`
 
 ### Java
 
