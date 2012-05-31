@@ -71,6 +71,10 @@ module Scaffold
       raise ArgumentError, response["error"]
     end
 
+    ##
+    # Checks the result of a background check
+    # 
+    # returns @results (status, ssn_valid, background_check_passed, request_id, ext_user_id, signature)
     def check_background_check_result(request_id)
       return_code, response = send_command("background_check/check_result",
         token, {:request_id => request_id})

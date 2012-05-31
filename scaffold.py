@@ -77,6 +77,19 @@ class api:
     else:
       raise ValueError(response["error"])
 
+  def check_background_check_result(request_id): 
+    """
+    Checks the result of a background check
+   
+    returns @results (status, ssn_valid, background_check_passed, request_id, ext_user_id, signature)
+    """
+      return_code, response = self.__send_command("background_check/check_result",
+        self.token, dict(request_id=>request_id))
+      if return_code == "200":
+        return response
+      else:
+        raise ValueError(response["error"])
+
   def mailing_address_send_code(self, first_name, last_name, address, city, state,
       zip, email, address2 = None):
     """ 

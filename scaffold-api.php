@@ -92,6 +92,21 @@ class ScaffoldApi {
     }
   }
 
+  /**
+   * Checks the result of a background check
+   * 
+   * @return hash results (status, ssn_valid, background_check_passed, request_id, ext_user_id, signature)
+   */
+  function check_background_check_result($request_id) {
+      $response = $this->send_command("background_check/check_result",
+        $this->token, array("request_id" => $request_id));
+      if ($response["code"] == 200) {
+        return $response["body"];
+      } else {
+        throw new InvalidArgumentException($response["body"]["error"]);
+      }
+    end
+
   /** 
    * Sends a postcard with a code to the specified mailing address
    * @param string $address first line of the mailing address
