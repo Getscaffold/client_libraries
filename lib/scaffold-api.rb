@@ -71,6 +71,13 @@ module Scaffold
       raise ArgumentError, response["error"]
     end
 
+    def check_background_check_result(request_id)
+      return_code, response = send_command("background_check/check_result",
+        token, {:request_id => request_id})
+      return response if return_code == "200"
+      raise ArgumentError, response["error"]
+    end
+
     ##
     # Sends a postcard with a code to the specified mailing address
     #
