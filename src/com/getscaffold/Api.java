@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.Map;
 import java.util.TreeMap;
 
+import com.getscaffold.ApiResponse.ApiResponseBody;
 import com.google.gson.Gson;
 
 /**
@@ -123,6 +124,25 @@ public class Api {
     		sendCommand("background_check/submit_request", token, params); 
     if (response.getCode() == 200) {
       return response.getBody().getRequestId();
+    } else {
+      throw new IOException(response.getBody().getError());
+    }
+  }
+  
+  /**
+   * Checks the result of a background check
+   * @param requestId
+   * 
+   * @return ApiResponseBody containing the following params:
+   *  (status, ssn_valid, background_check_passed, request_id, ext_user_id, signature)
+   */
+  public ApiResponseBody checkBackgroundCheckResult(String requestId) throws IOException {
+  	Map<String,String> params = new TreeMap<String,String>();
+  	params.put("request_id", requestId);
+    ApiResponse response = 
+      sendCommand("background_check/check_result", token, params);
+    if (response.getCode() == 200) {
+      return response.getBody();
     } else {
       throw new IOException(response.getBody().getError());
     }
